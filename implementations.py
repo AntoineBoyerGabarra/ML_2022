@@ -176,3 +176,64 @@ def reg_logistic_regression(y, tx, lambda_, initial_w, max_iters, gamma):
             break
 
     return loss, w
+
+
+#additional functions
+def c_hessian(y, tx, w):
+    """return the Hessian of the loss function.
+
+    Args:
+        y:  shape=(N, 1)
+        tx: shape=(N, D)
+        w:  shape=(D, 1) 
+    """
+    pred = sigmoid(tx.dot(w))
+    pred = np.diag(pred.T[0])
+    r = np.multiply(pred, (1-pred))
+    return tx.T.dot(r).dot(tx)
+
+def learning_by_newton_method(y, tx, w, gamma):
+    """
+    Do one step of Newton's method.
+    Return the loss and updated w.
+
+    Args:
+        y:  shape=(N, 1)
+        tx: shape=(N, D)
+        w:  shape=(D, 1)
+        gamma: scalar
+
+    """
+     
+    gradient = c_gradient(y, tx, w)
+    print(gradient.shape)   #problematic is N,D instead of D,1
+    hessian = c_hessian(y ,tx ,w)
+    print(hessian.shape)
+    w = w - (gamma* np.linalg.solve(hessian, gradient))
+    print(w.shape)
+    loss = c_loss(y, tx, w)
+    return loss, w
+
+#7
+def logistic_regression_newton_method(y, tx, lambda_, initial_w, max_iter, gamma =1):
+    # init parameters
+ 
+    threshold = 1e-8
+    losses = []
+    loss = 0
+    w = initial_w
+    # start the logistic regression
+    for iter in range(max_iter):
+        # get loss and update w.
+        loss, w = learning_by_newton_method(y, tx, w, gamma)
+        # log info
+        #if iter % 1 == 0:
+            #print("Current iteration={i}, the loss={l}".format(i=iter, l=loss))
+
+        # converge criterion
+        losses.append(loss)
+        print(loss.shape)
+        print(w.shape)
+        #if len(losses) > 1 and np.abs(losses[-1] - losses[-2]) < threshold: 
+            #break
+    return loss, w
