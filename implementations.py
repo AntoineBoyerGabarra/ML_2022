@@ -204,7 +204,8 @@ def learning_by_newton_method(y, tx, w, gamma):
         gamma: scalar
 
     """
-     
+    print(w.shape)
+    print(tx.shape)
     gradient = c_gradient(y, tx, w)
     print(gradient.shape)   #problematic is N,D instead of D,1
     hessian = c_hessian(y ,tx ,w)
