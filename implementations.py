@@ -114,7 +114,6 @@ def ridge_regression(y, tx, lambda_):
 
 # tool function for logistic regression descent
 def sigmoid(z):
-    # print(z)
     return 1.0 / (1.0 + np.exp(-z))
 
 
@@ -204,14 +203,9 @@ def learning_by_newton_method(y, tx, w, gamma):
         gamma: scalar
 
     """
-    print(w.shape)
-    print(tx.shape)
     gradient = c_gradient(y, tx, w)
-    print(gradient.shape)   #problematic is N,D instead of D,1
     hessian = c_hessian(y ,tx ,w)
-    print(hessian.shape)
     w = w - (gamma* np.linalg.solve(hessian, gradient))
-    print(w.shape)
     loss = c_loss(y, tx, w)
     return loss, w
 
@@ -233,8 +227,6 @@ def logistic_regression_newton_method(y, tx, lambda_, initial_w, max_iter, gamma
 
         # converge criterion
         losses.append(loss)
-        print(loss.shape)
-        print(w.shape)
-        #if len(losses) > 1 and np.abs(losses[-1] - losses[-2]) < threshold: 
-            #break
+        if len(losses) > 1 and np.abs(losses[-1] - losses[-2]) < threshold: 
+            break
     return loss, w
