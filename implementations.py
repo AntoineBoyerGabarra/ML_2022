@@ -139,7 +139,7 @@ def logistic_regression(y, tx, initial_w, max_iters, gamma):
     # Define parameters to store w and loss
     losses = []
     w = initial_w
-    threshold = np.exp(-16)
+    threshold = np.exp(-32)
     loss = 0.0
 
     for n_iter in range(max_iters):
@@ -161,7 +161,7 @@ def reg_logistic_regression(y, tx, lambda_, initial_w, max_iters, gamma):
     # Define parameters to store w and loss
     losses = []
     w = initial_w
-    threshold = np.exp(-16)
+    threshold = np.exp(-32)
     loss = 0
 
     for n_iter in range(max_iters):
