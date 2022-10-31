@@ -38,7 +38,9 @@ implements and runs the functions of _implementations.py/ipynb_
 
 > cleaning the data : 
 > > division of the data in four according to the values of feature at index 22
+> > 
 > > removal of undefined values and outliers
+> > 
 > > standardization of the data
 
 > method and training : 
