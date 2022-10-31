@@ -32,8 +32,9 @@ The functions are the following :
 
 
 ## _run.py/ipynb_
--regroups the process of data visualization and cleaning.
+regroups the process of data visualization, cleaning and the training of the methods.
 
-implents and runs the functions of _implementations.py/ipynb_  
+ implents and runs the functions of _implementations.py/ipynb_  
+
 
 
