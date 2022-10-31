@@ -12,7 +12,7 @@ Before training our data, the set was visualized, analyzed and cleaned.
 This file explains the structure of the repository.
 
 ## _implementations.py/ipynb_
-contains the functions that had to be implemented for the training.
+Contains the functions that had to be implemented for the training.
 
 The functions are the following :
 
@@ -28,13 +28,13 @@ The functions are the following :
 
 >[reg_logistic_regression] : uses logistic gradient descent with a regularizer to avoid overfit.
 
->[logistic_regression_newton_method] : logisitc function minimized by quadratic approximation.
+>[logistic_regression_newton_method] : logistic function minimized by quadratic approximation.
 
 
 ## _run.py/ipynb_
-regroups the process of data visualization, cleaning and the training of the methods.
+Regroups the process of data visualization, cleaning and the training of the methods.
 
-implements and runs the functions of _implementations.py/ipynb_  
+Implements and runs the functions of _implementations.py/ipynb_  
 
 > cleaning the data : 
 > > division of the data in four according to the values of feature at index 22
