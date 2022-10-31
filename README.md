@@ -36,10 +36,11 @@ regroups the process of data visualization, cleaning and the training of the met
 
 implements and runs the functions of _implementations.py/ipynb_  
 
-> cleaning the data : > division of the data in four according to the values of feature at index 22
-  >  undefined values and outliers removed
-  >  standardization of the data
+> cleaning the data : 
+> > division of the data in four according to the values of feature at index 22
+> > removal of undefined values and outliers
+> > standardization of the data
 
-> method and training : > 
-  >
+> method and training : 
+> > implementation of ridge regression with optimized parameters
 
