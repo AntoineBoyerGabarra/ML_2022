@@ -12,15 +12,24 @@ Before training our data, the set was visualized, analyzed and cleaned.
 This file explains the structure of the repository.
 
 ## _implementations.py/ipynb_
-contains the functions that had to be implemented for the training. 
+contains the functions that had to be implemented for the training.
+
 The functions are the following :
-[mean_squared_error_gd] : uses the gradient descent method in order to minimize the mean square error. 
-[mean_squared_error_sgd] : uses the stochastic gradient descent method in order to minimize the mean square error. It allows to decrease the complexity of the function using a subset. 
-[least_squares]
-[ridge_regression] : uses mean squared gradient descent with a regularizer to avoid overfit.
-[logistic_regression] : uses the gradient descent method in order to minimize the logistic function.
-[reg_logistic_regression] : uses logistic gradient descent with a regularizer to avoid overfit.
-[logistic_regression_newton_method] : logisitc function minimized by quadratic approximation.
+
+>>[mean_squared_error_gd] : uses the gradient descent method in order to minimize the mean square error. 
+
+>>[mean_squared_error_sgd] : uses the stochastic gradient descent method in order to minimize the mean square error. It allows to decrease the complexity of the function using a subset. 
+
+>>[least_squares]
+
+>>[ridge_regression] : uses mean squared gradient descent with a regularizer to avoid overfit.
+
+>>[logistic_regression] : uses the gradient descent method in order to minimize the logistic function.
+
+>>[reg_logistic_regression] : uses logistic gradient descent with a regularizer to avoid overfit.
+
+>>[logistic_regression_newton_method] : logisitc function minimized by quadratic approximation.
+
 
 ## _run.py/ipynb_
 regroups the process of data visualization and cleaning
