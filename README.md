@@ -20,7 +20,7 @@ The functions are the following :
 
 >[mean_squared_error_sgd] : uses the stochastic gradient descent method in order to minimize the mean square error. It allows to decrease the complexity of the function using a subset. 
 
->[least_squares]
+>[least_squares] : uses the least square method
 
 >[ridge_regression] : uses mean squared gradient descent with a regularizer to avoid overfit.
 
@@ -34,7 +34,7 @@ The functions are the following :
 ## _run.py/ipynb_
 regroups the process of data visualization, cleaning and the training of the methods.
 
- implents and runs the functions of _implementations.py/ipynb_  
+implements and runs the functions of _implementations.py/ipynb_  
 
 
 
