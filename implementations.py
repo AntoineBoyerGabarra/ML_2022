@@ -114,7 +114,6 @@ def ridge_regression(y, tx, lambda_):
 
 # tool function for logistic regression descent
 def sigmoid(z):
-    print(z)
     return 1.0 / (1.0 + np.exp(-z))
 
 
